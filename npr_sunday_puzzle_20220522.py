@@ -33,34 +33,18 @@ def island_puzzle(island: str) -> str:
     return result
 
 
-islands = [
-    "Aaaab",
-    "Baaac",
-    "Aviation Island",
-    "Bird Island",
-    "Bunker Island",
-    "Cooper-Meng Island",
-    "Eastern Island",
-    "Engineer Island",
-    "Holei Island",
-    "Home Islets",
-    "Kaula Island",
-    "Marine Island",
-    "Papala Island",
-    "Paradise Island",
-    "Pelican Island",
-    "Quail Island",
-    "Sand Island",
-    "Strawn Island",
-    "Tanager Island",
-    "Whippoorwill Island",
-]
+def main() -> tuple:
+    islands = ["Guam", "Maui"]
 
-islands = [island.lower() for island in islands]
+    islands = [island.lower() for island in islands]
 
-answer = []
-for island in islands:
-    result = island_puzzle(island)
-    if result in islands:
-        answer.append((island, result))
-        print((island, result))
+    answer = []
+    for island in islands:
+        result = island_puzzle(island)
+        if result in islands:
+            answer.append((island, result))
+            print((island, result))
+
+
+if __name__ == "__main__":
+    main()
